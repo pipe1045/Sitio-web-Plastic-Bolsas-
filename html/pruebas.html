@@ -1,22 +1,937 @@
-<!DOCTYPE html>
+
+cc 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.titulo-plastic{
+    padding: 20;
+    box-sizing: border-box;
+    background-color: none;
+    background-image: linear-gradient(to right, #000000, #3c00ff);
+    -webkit-background-clip: text;
+    color: transparent;
+  
+}
+.sobre-nosotros {
+background-color: white;
+}
+
+
+body {
+    font-family: 'open sans';
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header {
+    
+  background: linear-gradient(to right, hsla(242, 98%, 50%, 0.397), hsla(242, 100%, 50%, 0.364)), url(/IMAGENES/plastic\ bolsas2\ \(1\).jpg);
+
+  background-attachment: fixed;
+  background-repeat: no-repeat; /* Opciones: repeat, repeat-x, repeat-y, no-repeat */
+    
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav > a:hover{
+    background-color: #3498db; 
+    padding: 10px; 
+    color: #fcfcfc;
+    display: inline-block; 
+    border-radius: 5px;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+/* liston */
+  
+
+.ribbon {
+  width: 400px;
+  height: 60px;
+  /*                     */
+  .ribbon {
+    width: 400px;
+    height: 60px;
+    margin: 100px , 40px;
+    position: relative;
+    color: #fff;
+    font: 28px/60px sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    background: #ff0080;
+    
+    -webkit-animation: main 250ms;
+    -moz-animation: main 250ms;
+    -ms-animation: main 250ms;
+    animation: main 250ms;
+  }
+  
+  .ribbon i {
+    position: absolute;
+  }
+  
+  .ribbon i:first-child, .ribbon i:nth-child(2) {
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    z-index: -1;
+    border: 20px solid transparent;
+    border-right-color: #ff0040;
+    
+    -webkit-animation: edge 500ms;
+    -moz-animation: edge 500ms;
+    -ms-animation: edge 500ms;
+    animation: edge 500ms;
+  }
+  
+  .ribbon i:nth-child(2) {
+    left: auto;
+    right: -20px;
+    border-right-color: transparent;
+    border-left-color: #cc00ff;
+  }
+  
+  .ribbon i:nth-child(3), .ribbon i:last-child {
+    width: 20px;
+    bottom: -20px;
+    left: -60px;
+    z-index: -2;
+    border: 30px solid #ff0000;
+    border-left-color: transparent;
+    
+    -webkit-animation: back 600ms;
+    -moz-animation: back 600ms;
+    -ms-animation: back 600ms;
+    animation: back 600ms;
+    
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+  }
+  
+  .ribbon i:last-child {
+    bottom: -20px;
+    left: auto;
+    right: -60px;
+    border: 30px solid #c01d46;
+    border-right-color: transparent;
+  
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  
+  p {
+    text-align: center;
+    color: #aaa;
+  }
+  
+  /* animations */
+  
+  @-webkit-keyframes main {
+    0% { -webkit-transform: scaleX(0); }
+    100% { -webkit-transform: scaleX(1); }
+  }
+  
+  @-webkit-keyframes edge {
+    0%, 50% { -webkit-transform: scaleY(0); }
+    100% { -webkit-transform: scaleY(1); }
+  }
+  
+  @-webkit-keyframes back {
+    0%, 75% { -webkit-transform: scaleX(0); }
+    100% { -webkit-transform: scaleX(1); }
+  }
+  
+  
+  @-moz-keyframes main {
+    0% { -moz-transform: scaleX(0); }
+    100% { -moz-transform: scaleX(1); }
+  }
+  
+  @-moz-keyframes edge {
+    0%, 50% { -moz-transform: scaleY(0); }
+    100% { -moz-transform: scaleY(1); }
+  }
+  
+  @-moz-keyframes back {
+    0%, 75% { -moz-transform: scaleX(0); }
+    100% { -moz-transform: scaleX(1); }
+  }
+  
+  
+  @keyframes main {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+  
+  @keyframes edge {
+    0%, 50% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+  }
+  
+  @keyframes back {
+    0%, 75% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+  position: relative;
+  color: #fff;
+  font: 28px/60px sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #ff0000;
+  
+  -webkit-animation: main 250ms;
+  -moz-animation: main 250ms;
+  -ms-animation: main 250ms;
+  animation: main 250ms;
+}
+/*                     */
+ /*                     */
+ .ribbon {
+  width: 400px;
+  height: 60px;
+  margin: 100px auto 0px;
+  position: relative;
+  color: #fff;
+  font: 28px/60px sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  background: #0004ff;
+  
+  -webkit-animation: main 250ms;
+  -moz-animation: main 250ms;
+  -ms-animation: main 250ms;
+  animation: main 250ms;
+}
+
+.ribbon i {
+  position: absolute;
+}
+
+.ribbon i:first-child, .ribbon i:nth-child(2) {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  z-index: -1;
+  border: 20px solid transparent;
+  border-right-color:  #0004ff;
+  
+  -webkit-animation: edge 500ms;
+  -moz-animation: edge 500ms;
+  -ms-animation: edge 500ms;
+  animation: edge 500ms;
+}
+
+.ribbon i:nth-child(2) {
+  left: auto;
+  right: -20px;
+  border-right-color: transparent;
+  border-left-color:  #0004ff;
+}
+
+.ribbon i:nth-child(3), .ribbon i:last-child {
+  width: 20px;
+  bottom: -20px;
+  left: -60px;
+  z-index: -2;
+  border: 30px solid  #0004ff;
+  border-left-color: transparent;
+  
+  -webkit-animation: back 600ms;
+  -moz-animation: back 600ms;
+  -ms-animation: back 600ms;
+  animation: back 600ms;
+  
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.ribbon i:last-child {
+  bottom: -20px;
+  left: auto;
+  right: -60px;
+  border: 30px solid #0004ff;
+  border-right-color: transparent;
+
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+p {
+  text-align: center;
+  color: #000000;
+}
+
+/* animations */
+
+@-webkit-keyframes main {
+  0% { -webkit-transform: scaleX(0); }
+  100% { -webkit-transform: scaleX(1); }
+}
+
+@-webkit-keyframes edge {
+  0%, 50% { -webkit-transform: scaleY(0); }
+  100% { -webkit-transform: scaleY(1); }
+}
+
+@-webkit-keyframes back {
+  0%, 75% { -webkit-transform: scaleX(0); }
+  100% { -webkit-transform: scaleX(1); }
+}
+
+
+@-moz-keyframes main {
+  0% { -moz-transform: scaleX(0); }
+  100% { -moz-transform: scaleX(1); }
+}
+
+@-moz-keyframes edge {
+  0%, 50% { -moz-transform: scaleY(0); }
+  100% { -moz-transform: scaleY(1); }
+}
+
+@-moz-keyframes back {
+  0%, 75% { -moz-transform: scaleX(0); }
+  100% { -moz-transform: scaleX(1); }
+}
+
+
+@keyframes main {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes edge {
+  0%, 50% { transform: scaleY(0); }
+  100% { transform: scaleY(1); }
+}
+
+@keyframes back {
+  0%, 75% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+    background-color: #ffffff;
+}
+
+
+
+.imagen-about-us{
+    margin-bottom: 60px;
+    width: 99%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 95%;
+}
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #2c00af;
+    color: #f9f6f6;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.585);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+.contenedor-sobre-nosotros {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+}
+
+.imagen-about-us,
+.sobre-nosotros .contenido-textos {
+    width: 48%; 
+    margin-bottom: 20px; 
+}
+
+.sobre-nosotros .contenido-textos {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.imagen-about-us {
+    margin-bottom: 20px; 
+}
+
+
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #3c00ff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    /* ABOUT US */
+
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+    
+}
+@import "compass/css3";
+
+
+.contenedor-ubicacion {
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 2; /* Z-index para la caja de ubicación */
+ background-color: rgb(59, 59, 59);
+}
+
+.row {
+    background: #ffffff;
+    height: 2vh; /* Altura ajustada */
+    width: 100%;
+    animation: fade 5s infinite;
+    animation-direction: alternate;
+    position: absolute; /* Permite superponer */
+    z-index: 1;
+}
+
+.row:nth-child(1) { top: 0; }
+.row:nth-child(2) { top: 10%; animation-delay: 0.5s; }
+.row:nth-child(3) { top: 20%; animation-delay: 1s; }
+.row:nth-child(4) { top: 30%; animation-delay: 1.5s; }
+.row:nth-child(5) { top: 40%; animation-delay: 2s; }
+.row:nth-child(6) { top: 50%; animation-delay: 2.5s; }
+.row:nth-child(7) { top: 60%; animation-delay: 3s; }
+.row:nth-child(8) { top: 70%; animation-delay: 3.5s; }
+.row:nth-child(9) { top: 80%; animation-delay: 4s; }
+.row:nth-child(10) { top: 90%; animation-delay: 4.5s; }
+
+.titulo-ubicacion {
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 60px;
+  position: absolute;
+  z-index: 4; 
+  transform: translate(-50%, -450%);
+  top: 50%;
+  left: 50%;
+}
+
+.caja-ubicacion {
+  width: 340px;
+  height: 240px;
+  background-color: none;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(252, 76, 76, 0.1);
+  z-index: 4; 
+}
+
+@keyframes fade {
+  from { background: #fcfcfc; }
+  to { background: #3f00d3; }
+}
+.imagen-ubicacion2{
+    background-attachment: fixed;
+    background-repeat: repeat; 
+    background-size: cover;
+}
+
+
+  .experiencia {
+    padding: 60px 0 30px 0;
+    margin: auto;
+    display: flex;
+    background-image: url(/IMAGENES/FONO-LINEAS-AZUL.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    align-items: center;
+}
+.cuadrado-experiencia {
+  border: 4px solid #3c00ff; 
+  color: #ffffff; 
+  padding: 10px; 
+  margin-right: 20px; 
+  display: inline-block;
+}
+
+.caja-pequena {
+  width: 380px;
+  height: 280px;
+  background-color: #d3d3d3;
+  border: 1px solid #999;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  border-radius: 8px;
+}
+
+.caja-pequena img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cajita-experiencia {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: none;
+  background-image: linear-gradient(to right, #000000, #3c00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+----
+
+.contenedor.ex {
+  display: flex;
+  align-items: center;
+}
+
+
+.numero-grande {
+  font-size: 60px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.texto-experiencia {
+  margin: 0;
+  line-height: 1.4; 
+  color: #000000; 
+  align-items: center;
+  font-size: 25;
+}
+.texto-container.ex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px; 
+}
+
+
+
+.Texto-ex{
+  color: #000000;
+  font-size: 30px;
+}
+
+/* Parte derecha con imagen */
+.imagen-ex {
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.image-ex img {
+  width: 100%;
+  height: auto;
+  display: block; 
+  background-color: none;
+}
+
+
+
+.contenedor-asesoria {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/IMAGENES/fondos/arboles.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+.asesoria {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.content h1 {
+  color: #004b8d;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #3c00ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+/* Keyframes para animar la cinta */
+@-webkit-keyframes main { 0% { -webkit-transform: scaleX(0); } 100% { -webkit-transform: scaleX(1); } }
+@keyframes main { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+@-webkit-keyframes edge { 0%, 50% { -webkit-transform: scaleY(0); } 100% { -webkit-transform: scaleY(1); } }
+@keyframes edge { 0%, 50% { transform: scaleY(0); } 100% { transform: scaleY(1); } }
+@-webkit-keyframes back { 0%, 75% { -webkit-transform: scaleX(0); } 100% { -webkit-transform: scaleX(1); } }
+@keyframes back { 0%, 75% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+
+
+
+
+
+html
+
+oye ayudame a que sea responsive <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empaques Plásticos</title>
-    <link rel="stylesheet" href="/css/pruebas.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PLASTIC BOLSAS S.A.A</title>
+    <link rel="shortcut icon" href="/IMAGENES/PLAS.jpg type="img>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/js/estilos.js">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
 </head>
+
 <body>
-    <div class="container">
-        <div class="content">
-            <h1>FABRICAMOS PRODUCTOS PLASTICOS 100% AMIGABLES CON EL MEDIO AMBIENTE</h1>
-            <p>COMUNICATE CON NOSOTROS PARA TENER EL GUSTO DE ATENDERLOS.</p>
-            <p>NO ESPERES MÁS!!</p>
-            <a href="https://wa.me/qr/Z2GLUCKDMWQGP1" class="button">Solicita una asesoría</a>
+    
+    <header>
+        <nav>
+            <a href="#">INICIO</a>
+            <a href="/html/portafolio.html">CATÁLOGO</a>
+            <a href="/html/contactanos.html">CONTACTANOS</a>
+        
+        </nav>
+        <section class="textos-header">
+            <h1 class="titulo-plastic">PLASTIC BOLSAS S.A.S</h1>
+            <h2>La mejor calidad con el precio soñado</h2>
+        </section>
+    </header>
+    <main>
+        <div class="ribbon">
+           CONOCENOS
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>   
+          <pre>
+
+          </pre>
+          
+        <section class="sobre-nosotros">
+            <div class="contenedor-sobre-nosotros">
+                <img src="/IMAGENES/lateral 5 imagen.jpg" alt="" class="imagen-about-us">
+
+
+                <div class="contenido-textos">
+                    <h3><span>1</span>QUIENES SOMOS</h3>
+                    <p>Somos una famila tradicional , la cual somos fabricantes y distribuidor en productos amigables con el medio ambiente
+                    realizados con aterias primas recicladas en su 80%, cumpliendo con los estanadares de la mejor calidad.
+                    </p>
+                    <h3><span>2</span>MISIÒN</h3>
+                    <p>Nuestra mision es llegar a cada hogar con nuestros productos con el fin de cuidar el medio ambiente. </p>
+                    <h3><span>3</span>VISIÒN</h3>    
+                    <p>Nuestra Vision es llegar a cada hogar con nuestros productos con el fin de cuidar el medio ambiente</p>
+                    <h3><span>4</span>VALORES</h3>    
+                       <p>Nos enfocamos en la puntualidad a la hora de la entrega de nuestros productos,
+                          y responsabilidad-etica y moral, en cuanto al estado en el cual entregamos los
+                          productos a nuestros clientes. </p>
+                </div>
+
+            </div>
+         
+        
+        
+        </section>
+        <div class="experiencia">
+            <div class="cajita-experiencia">
+                <h2>NUESTRA GRAN TRAYECTORIA</h2>
+                <p class ="Texto-ex"> CUENTA CON MAS DE </p>
+            </div>
+            
+         <div class="contenedor-ex">
+           <div class="cuadrado-experiencia">
+             <div class="numero-grande">40</div>
+           </div>
+           <p class="texto-experiencia"> AÑOS   DE EXPERIENCIA</p>
+        
+         </div>
+        
+        <pre> </pre>
+         
+           <div class="caja-pequena">
+               <img src="/IMAGENES/2.jpg" alt="">
+           </div>
+           <div class="caja-pequena">
+               <img src="/IMAGENES/maquina-para-la-produccion-de-bolsas-de-plastico-m9txrr.jpg" alt="">
+           </div>
+           <div class="caja-pequena">
+               <img src="/IMAGENES/OIP.jpg" alt="">
+           </div>
+         </div>
+           
+           
+        <body>
+            <div class="franja-menu">
+            <div class="contenedor-ubicacion">
+              <div class="row-1 row"></div>
+              <div class="row-2 row"></div>
+              <div class="row-3 row"></div>
+              <div class="row-4 row"></div>
+              <div class="row-5 row"></div>
+              <div class="row-6 row"></div>
+              <div class="row-7 row"></div>
+              <div class="row-8 row"></div>
+              <div class="row-9 row"></div>
+              <div class="row-10 row"></div>
+               
+          <pre>   
+
+          </pre>
+              <div class="caja-ubicacion">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.6320037531598!2d-74.79995512885783!3d4.311380766263786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f28b9a07ea66f%3A0xe5cbbdbef0ae8bab!2sPLASTIC%20-%20BOLSAS%20S.A.S.!5e0!3m2!1ses!2sco!4v1714084998396!5m2!1ses!2sco" width="300px" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <pre>
+              </pre>
+              <h2 class="titulo-ubicacion">
+                <pre></pre>
+                Como puedes llegar</h2>
+                
+              </div>
+            </div>
+            <div class="contenedor-asesoria">
+                <div class="asesoria">
+                    <div class="content">
+                        <h1>FABRICAMOS PRODUCTOS PLASTICOS 100% AMIGABLES CON EL MEDIO AMBIENTE</h1>
+                        <p>COMUNICATE CON NOSOTROS PARA TENER EL GUSTO DE ATENDERLOS.</p>
+                        <p>NO ESPERES MÁS!!</p>
+                        <a href="https://wa.me/qr/Z2GLUCKDMWQGP1" class="button">Solicita una asesoría</a>
+                    </div>
+                    <div class="image-box">
+                        <img src="/IMAGENES/fondos/plastic_bolsas2__1_-removebg-preview.png" alt="collage">
+                    </div>
+            </div>        
+            </div>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>CELULAR</h4>
+                <p>3158727603</p>
+            </div>
+            <div class="content-foo">
+                <h4>CORREO</h4>
+                <p>almacenplasticbolsas@hotmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>UBICACIÓN</h4>
+                <p>GIRARDOT, CUNDINAMARCA</p>
+            </div>
         </div>
-        <div class="image-box">
-            <img src="/IMAGENES/tu-imagen.jpg" alt="collage">
-        </div>
-    </div>
+        <h2 class="titulo-final">&copy; PLASTIC BOLSAS S.A.S </h2>
+    </footer>
 </body>
+
 </html>

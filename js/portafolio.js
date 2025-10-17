@@ -1,3 +1,4 @@
+
 // Header hide/show
 (function(){
   const header = document.getElementById('site-header');
@@ -26,7 +27,7 @@ function createParticles(canvasId, color){
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
   const particles = [];
-  for(let i=0;i<50;i++){
+  for(let i=0;i<90;i++){
     particles.push({
       x:Math.random()*canvas.width,
       y:Math.random()*canvas.height,
@@ -53,8 +54,8 @@ function createParticles(canvasId, color){
 }
 
 // Colors: RGB
-createParticles('particles-inicio','255,255,255'); // white sparkles
-createParticles('particles-bolsas','60,0,255'); // blue particles
-createParticles('particles-aseo','60,179,113'); // green particles
-createParticles('particles-desechables','255,140,0'); // orange particles
-createParticles('particles-footer','255,255,0'); // yellow footer
+createParticles('particles-inicio','255,255,255'); // Particulas Blancas
+createParticles('particles-bolsas','255,255,255'); // Particulas Blancas
+createParticles('particles-aseo','0,0,0'); // Particulas negras
+createParticles('particles-desechables','255,0,0'); // Particulas rojas
+createParticles('particles-footer','255,255,0'); // Particulas Amarillas
