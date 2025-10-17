@@ -43,7 +43,7 @@
           <article class="imagen-port">
             <img src="/IMAGENES/mani.jpg" alt="Bolsas de manija">
             <div class="hover-galeria">
-              <img src="/IMAGENES/PLAS.jpg" alt="logo">
+              <img src="/IMAGENES/plastic bolsas2 (1).jpg" alt="logo">
               <h3>BOLSAS DE MANIJA</h3>
               <p>Permiten cargar mucho peso de la manera más cómoda.</p>
             </div>
@@ -478,3 +478,163 @@
   <script src="/js/portafolio.js"></script>
 </body>
 </html>
+
+
+
+
+-------
+
+// Header hide/show
+(function(){
+  const header = document.getElementById('site-header');
+  let lastScroll = 0;
+  window.addEventListener('scroll',()=> {
+    const current = window.scrollY;
+    if(current > lastScroll && current > 100){header.classList.add('header-hidden');}
+    else{header.classList.remove('header-hidden');}
+    lastScroll = current;
+  });
+})();
+
+// Reveal sections
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('is-visible');}
+  });
+},{threshold:0.1});
+reveals.forEach(el=>revealObserver.observe(el));
+
+// Particle effect for each section
+function createParticles(canvasId, color){
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+  const particles = [];
+  for(let i=0;i<90;i++){
+    particles.push({
+      x:Math.random()*canvas.width,
+      y:Math.random()*canvas.height,
+      r:Math.random()*3+1,
+      dx:(Math.random()-0.5)*1.5,
+      dy:(Math.random()-0.5)*1.5,
+      alpha:Math.random()*0.5+0.2
+    });
+  }
+  function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{
+      p.x+=p.dx; p.y+=p.dy;
+      if(p.x>canvas.width||p.x<0)p.dx*=-1;
+      if(p.y>canvas.height||p.y<0)p.dy*=-1;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2,false);
+      ctx.fillStyle=`rgba(${color},${p.alpha})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+// Colors: RGB
+createParticles('particles-inicio','255,255,255'); // Particulas Blancas
+createParticles('particles-bolsas','255,255,255'); // Particulas Blancas
+createParticles('particles-aseo','0,0,0'); // Particulas negras
+createParticles('particles-desechables','255,0,0'); // Particulas rojas
+createParticles('particles-footer','255,255,0'); // Particulas Amarillas
+
+-------
+
+/* Reset y tipografía */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family: 'Open Sans', sans-serif; overflow-x:hidden; background:#111; color:#fff;}
+
+/* Header */
+header {position:fixed; top:0; width:100%; z-index:999; background:rgba(0,0,0,0.85); transition:top 0.4s;}
+header .main-nav a {color:#fff; margin:0 15px; text-decoration:none; transition:color 0.3s;}
+header .main-nav a:hover {color:#ffd700;}
+.header-hidden {top:-80px;}
+
+/* HERO */
+.hero-section {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; position:relative; background:linear-gradient(135deg, #000428, #004e92);}
+.hero-content h1 {font-size:3rem; background: linear-gradient(90deg,#00f,#0ff); -webkit-background-clip:text; color:transparent; text-shadow:0 0 10px #000;}
+.hero-sub {font-size:1.5rem; margin-top:10px;}
+
+/* Portfolio Sections */
+.portfolio-section {position:relative; padding:80px 20px; min-height:100vh; text-align:center; overflow:hidden;}
+.section-bolsas {background:linear-gradient(135deg,#1e3c72,#2a5298);}
+.section-aseo {background:linear-gradient(135deg,#56ab2f,#a8e063);}
+.section-desechables {background:linear-gradient(135deg,#ff512f,#f09819);}
+
+/* Ribbons */
+.ribbon {font-size:2rem; font-weight:600; margin-bottom:50px; text-transform:uppercase; position:relative; display:inline-block; color:#fff;}
+.ribbon i {display:inline-block; animation:blink 2s infinite alternate;}
+@keyframes blink {0%{opacity:0.2;}100%{opacity:1;}}
+
+/* Galería */
+.galeria-port {display:flex; flex-wrap:wrap; justify-content:center; gap:20px; position:relative; z-index:2;}
+.imagen-port {position:relative; overflow:hidden; border-radius:12px; transition:all 0.5s ease;}
+.imagen-port img {width:250px; height:250px; object-fit:cover; transition:all 0.5s ease; border-radius:12px;}
+.imagen-port:hover img {transform:translateY(-10px) scale(1.05); box-shadow:0 0 30px rgba(255,255,255,0.6);}
+.hover-galeria {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); opacity:0; transition:opacity 0.3s; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff;}
+.imagen-port:hover .hover-galeria {opacity:1;}
+.hover-galeria img {width:150px; margin-bottom:5px;}
+.hover-galeria h3 {margin-bottom:5px; font-size:1.2rem;}
+
+/* Reveal Animation */
+.reveal {opacity:0; transform:translateY(20px); transition:all 1s ease-out;}
+.is-visible {opacity:1; transform:translateY(0);}
+
+/* Canvas Particles */
+canvas {position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1;}
+
+/* Footer */
+.site-footer {background:#111; padding:50px 20px; position:relative;}
+.contenedor-footer {display:flex; justify-content:center; flex-wrap:wrap; gap:40px; margin-bottom:20px;}
+.content-foo h4 {margin-bottom:10px; color:#ffffff;}
+.titulo-final {text-align:center; color:#fff;}
+
+/* Responsive */
+@media(max-width:768px){.imagen-port img{width:200px;height:200px;}.hover-galeria h3{font-size:1rem;}}
+/* Header visible por defecto */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #0a0a0a, #3c00ff);
+  color: white;
+  z-index: 999;
+  transition: top 0.5s ease, background 0.5s ease;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Cuando el header se oculta */
+.header-hidden {
+  top: -120px; /* sube fuera de la vista */
+}
+
+/* Links del header */
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+.main-nav a:hover {
+  color: #ffffff;
+}
+
+/* Marca/logo */
+.brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+
+}

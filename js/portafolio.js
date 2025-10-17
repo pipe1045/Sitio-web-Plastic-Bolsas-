@@ -59,3 +59,4 @@ createParticles('particles-bolsas','255,255,255'); // Particulas Blancas
 createParticles('particles-aseo','0,0,0'); // Particulas negras
 createParticles('particles-desechables','255,0,0'); // Particulas rojas
 createParticles('particles-footer','255,255,0'); // Particulas Amarillas
+

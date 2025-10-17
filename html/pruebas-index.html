@@ -934,4 +934,296 @@ oye ayudame a que sea responsive <!DOCTYPE html>
     </footer>
 </body>
 
+</html>  version 1
+
+
+
+version 2 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plastic S.A.S</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" />
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:"Open Sans",sans-serif; color:#333;}
+
+    /* HEADER */
+    header {
+      width: 100%;
+      height: 70vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("/IMAGENES/plastic bolsas2 (1).jpg") center/cover no-repeat;
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      text-align:center; color:white; position:relative;
+    }
+
+    /* NAV */
+    nav {
+      display:flex; justify-content:center; gap:30px;
+      background:rgba(0,0,0,0.3); padding:15px;
+      position:fixed; top:0; width:100%; z-index:100;
+      transition: all 0.3s ease;
+    }
+
+    nav a {color:#fff; text-decoration:none; font-weight:600; transition:0.3s;}
+    nav a:hover {color:#00bcd4;}
+
+    .menu-toggle {
+      display:none;
+      flex-direction:column;
+      cursor:pointer;
+      position:absolute;
+      right:20px;
+      top:15px;
+      z-index:101;
+    }
+    .menu-toggle span {
+      background:white;
+      height:3px;
+      width:25px;
+      margin:4px 0;
+      border-radius:3px;
+      transition:0.3s;
+    }
+
+    .textos-header {margin-top:80px;}
+    .textos-header h1 {
+      font-size:2.5rem;
+      background-image:linear-gradient(to right,#008cff,#ffffff);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+    .textos-header h2 {font-weight:300; margin-top:10px;}
+
+    /* SOBRE NOSOTROS */
+    .sobre-nosotros {padding:60px 10%; background-color:white;}
+    .contenedor-sobre-nosotros {display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap;}
+    .imagen-about-us {width:100%; max-width:400px; border-radius:10px;}
+    .contenido-textos {flex:1; max-width:600px;}
+    .contenido-textos h3 {color:#3c00ff; margin-top:20px;}
+    .contenido-textos p {line-height:1.6; margin-top:5px;}
+
+    /* EXPERIENCIA */
+    .experiencia {
+      background:url("/IMAGENES/FONO-LINEAS-AZUL.jpg") center/cover no-repeat;
+      color:#000; text-align:center; padding:80px 20px; position:relative;
+    }
+    .experiencia::after {
+      content:""; position:absolute; inset:0; background:rgba(169,213,255,0.4);
+    }
+    .experiencia * {position:relative; z-index:1;}
+    .caja-pequena img {width:250px; height:180px; border-radius:15px; object-fit:cover;}
+
+    /* UBICACIÓN */
+    .ubicacion {
+      background:linear-gradient(180deg,#000,#3dd0fd);
+      position:relative; overflow:hidden; text-align:center; padding:60px 20px;
+    }
+    .caja-ubicacion iframe {
+      border-radius:15px;
+      position:relative;
+      z-index:2; /* el mapa es interactivo */
+    }
+
+    /* ASESORÍA */
+    .asesoria {display:flex; flex-wrap:wrap; align-items:center; justify-content:center; padding:80px 20px;}
+    .asesoria .content {max-width:600px; text-align:center;}
+    .asesoria .button {
+      display:inline-block; margin-top:15px; background:#00bcd4;
+      color:white; padding:10px 25px; border-radius:25px; text-decoration:none; transition:0.3s;
+    }
+    .asesoria .button:hover {background:#028f9c;}
+    .image-box img {width:300px; border-radius:20px;}
+
+    /* PROVEEDORES */
+    .proveedores {background:#f5f5f5; padding:40px 0; overflow:hidden;}
+    .slider {height:120px; display:flex; align-items:center; overflow:hidden;}
+    .slide-track {display:flex; animation:scroll 30s linear infinite; gap:30px;}
+    .slide img {
+      width:120px; height:70px; border-radius:15px; object-fit:contain;
+      background:white; box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    }
+    @keyframes scroll {0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+    .slider:hover .slide-track {animation-play-state:paused;}
+
+    /* FOOTER */
+    .site-footer {background:#111; padding:50px 20px; position:relative; overflow:hidden;}
+    .contenedor-footer {display:flex; justify-content:center; flex-wrap:wrap; gap:40px; margin-bottom:20px;}
+    .content-foo h4 {margin-bottom:10px; color:#ffffff;}
+    .titulo-final {text-align:center; color:#fff;}
+    .titulo-plastic{color:#4400ff;}
+    .Info-foother{color:#ffffff;}
+    #particles-footer {
+      position:absolute; top:0; left:0; width:100%; height:100%;
+      pointer-events:none; z-index:0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .menu-toggle {display:flex;}
+      nav {
+        flex-direction:column;
+        align-items:center;
+        position:fixed;
+        top:0; left:0;
+        height:0;
+        overflow:hidden;
+        background:rgba(0,0,0,0.9);
+        transition:height 0.3s ease;
+      }
+      nav.open {height:250px; padding-top:60px;}
+      nav a {display:block; margin:10px 0;}
+      .contenedor-sobre-nosotros {flex-direction:column;}
+      .imagen-about-us {max-width:90%;}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="navbar">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-nosotros">Sobre Nosotros</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#ubicacion">Cómo Llegar</a>
+      <a href="#asesoria">Asesoría</a>
+      <a href="/html/portafolio.html">Catálogo</a>
+      <a href="/html/contactanos.html">Contáctanos</a>
+    </nav>
+    <section class="textos-header" id="inicio">
+      <h1 class="Titulo-principal">PLASTIC BOLSAS S.A.S</h1>
+      <h2>Soluciones innovadoras en plásticos industriales</h2>
+    </section>
+  </header>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="sobre-nosotros" id="sobre-nosotros">
+    <div class="contenedor-sobre-nosotros">
+      <img src="/IMAGENES/lateral 5 imagen.jpg" alt="Sobre nosotros" class="imagen-about-us"/>
+      <div class="contenido-textos">
+        <h2 class="titulo-plastic">Conócenos</h2>
+        <p>En <strong>PLASTIC S.A.S</strong> somos una empresa líder en el desarrollo y comercialización de productos plásticos de alta resistencia...</p>
+        <h3>Misión</h3>
+        <p>Proveer soluciones plásticas que contribuyan al desarrollo industrial...</p>
+        <h3>Visión</h3>
+        <p>Ser la compañía más confiable y reconocida del sector plástico a nivel nacional e internacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="experiencia" id="experiencia">
+    <h2 class="titulo-plastic">Nuestra Experiencia</h2>
+    <div class="galeria-experiencia" style="display:flex;justify-content:center;flex-wrap:wrap;gap:50px;margin-top:50px;">
+      <div class="caja-pequena"><img src="/IMAGENES/2.jpg" alt="Experiencia 1"/></div>
+      <div class="caja-pequena"><img src="/IMAGENES/fondos/35-anos-de-experiencia.webp" alt="Experiencia 2"/></div>
+      <div class="caja-pequena"><img src="/IMAGENES/maquina-para-la-produccion-de-bolsas-de-plastico-m9txrr.jpg" alt="Experiencia 3"/></div>
+    </div>
+    <p style="margin-top:40px;max-width:700px;margin-inline:auto;">Contamos con más de 30 años de trayectoria brindando los mejores servicios de atencion y productos de alta calidad a nivel nacional</p>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section class="ubicacion" id="ubicacion">
+    <h2 class="titulo-plastic">Cómo Llegar</h2>
+    <div class="caja-ubicacion" style="margin-top:30px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.6320037531598!2d-74.79995512885783!3d4.311380766263786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f28b9a07ea66f%3A0xe5cbbdbef0ae8bab!2sPLASTIC%20-%20BOLSAS%20S.A.S.!5e0!3m2!1ses!2sco!4v1714084998396!5m2!1ses!2sco"
+        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- ASESORÍA -->
+  <section class="asesoria" id="asesoria" style="background:url('/IMAGENES/fondos/BIO ASEO.jpeg') center/cover no-repeat;">
+    <div class="content">
+      <h2 class="titulo-plastic">Asesoría Personalizada</h2>
+      <p>Nuestro equipo de expertos está preparado para brindarte el mejor acompañamiento técnico y comercial...</p>
+      <a href="https://wa.me/message/YJPAZ6OPDM6WJ1" class="button">Contáctanos</a>
+    </div>
+    <div class="image-box"><img src="/IMAGENES/plastic bolsas2 (1).jpg" alt="Asesoría"/></div>
+  </section>
+
+  <!-- PROVEEDORES -->
+  <section class="proveedores">
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide"><img src="/IMAGENES/Provedores/logotutty.png" /></div>
+        <div class="slide"><img src="/IMAGENES/Provedores/ajover-logo.png" /></div>
+        <div class="slide"><img src="/IMAGENES/Provedores/Lastra-logo.png" /></div>
+        <div class="slide"><img src="/IMAGENES/Provedores/acme-logo.png" /></div>
+        <div class="slide"><img src="/IMAGENES/Provedores/vacan-logo.png" /></div>
+        <div class="slide"><img src="/IMAGENES/Provedores/familia-logo.png" /></div>
+        <div class="slide"><img src="/IMAGENES/Provedores/logotutty.png" /></div>
+        <div class="slide"><img src="/IMAGENES/Provedores/ajover-logo.png" /></div>
+        <div class="slide"><img src="/IMAGENES/Provedores/Lastra-logo.png" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto" class="site-footer">
+    <div class="contenedor-footer">
+      <div class="content-foo"><h4>CELULAR</h4><p class="Info-foother">3158727603</p></div>
+      <div class="content-foo"><h4>GMAIL</h4><p class="Info-foother">almacenplasticbolsas@hotmail.com</p></div>
+      <div class="content-foo"><h4>UBICACIÓN</h4><p class="Info-foother">Girardot, Cundinamarca</p></div>
+    </div>
+    <h2 class="titulo-final">© PLASTIC BOLSAS S.A.S</h2>
+    <canvas id="particles-footer"></canvas>
+  </footer>
+
+  <script>
+    // MENU RESPONSIVO
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("navbar");
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      menuToggle.classList.toggle("open");
+    });
+
+    // Partículas del footer
+    function createFooterParticles() {
+      const canvas = document.getElementById('particles-footer');
+      const ctx = canvas.getContext('2d');
+      function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      const particles = [];
+      for (let i = 0; i < 90; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 3 + 1,
+          dx: (Math.random() - 0.5) * 0.5,
+          dy: -Math.random() * 1,
+          alpha: Math.random() * 0.5 + 0.3
+        });
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.x += p.dx;
+          p.y += p.dy;
+          if (p.x > canvas.width || p.x < 0) p.dx *= -1;
+          if (p.y < 0) { p.y = canvas.height; p.x = Math.random() * canvas.width; }
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,255,0,${p.alpha})`;
+          ctx.fill();
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+    createFooterParticles();
+  </script>
+</body>
 </html>
