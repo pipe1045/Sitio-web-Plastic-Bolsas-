@@ -142,3 +142,22 @@
     white-space: nowrap; /* evita que se rompa el texto */
   }
 }
+/* MAPA RESPONSIVE */
+.caja-ubicacion {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* puedes ajustar el máximo */
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 ratio, se adapta */
+  margin: 30px auto 0 auto; /* centrado */
+}
+
+.caja-ubicacion iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 0;
+}
