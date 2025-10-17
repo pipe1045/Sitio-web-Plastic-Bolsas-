@@ -23,8 +23,6 @@
 
     nav a {color:#fff; text-decoration:none; font-weight:600; transition:0.3s;}
     nav a:hover {color:#00bcd4;}
-    header .main-nav a {color:#fff; margin:0 15px; text-decoration:none; transition:color 0.3s;}
-    header .main-nav a:hover {color:#ffd700;}
 
     .menu-toggle {
       display:none;
@@ -118,4 +116,29 @@
       position:absolute; top:0; left:0; width:100%; height:100%;
       pointer-events:none; z-index:0;
     }
+/* NAV RESPONSIVE */
+@media (max-width: 900px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+  }
+  nav a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
 
+@media (max-width: 600px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8px 10px;
+  }
+  nav a {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+    white-space: nowrap; /* evita que se rompa el texto */
+  }
+}
