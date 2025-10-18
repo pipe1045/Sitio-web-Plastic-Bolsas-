@@ -6,19 +6,25 @@
 }
 
 /* NAV */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px 20px;
+}
+
 nav > a {
     color: black;
-    font-weight: 1000;
+    font-weight: 700;
     text-decoration: none;
-    margin-right: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+    transition: 0.3s;
 }
 
 nav > a:hover {
-    background-color: #3498db;
-    padding: 20px;
-    color: black;
-    display: inline-block;
-    border-radius: 15px;
+    background: #3498db;
+    color: #fff;
 }
 
 /* BODY Y FONDO */
@@ -90,7 +96,7 @@ body {
 }
 
 .data > p > i {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     margin-right: 10px;
     font-size: 25px;
 }
@@ -211,5 +217,15 @@ form > button:hover {
 @media screen and (max-width: 600px) {
     .box-info > h1 {
         font-size: 1.5rem;
+    }
+
+    nav {
+        justify-content: center; /* centra el botón volver */
+        padding: 10px;
+    }
+
+    nav > a {
+        padding: 8px 15px; /* más pequeño */
+        font-size: 0.9rem;
     }
 }
